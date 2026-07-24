@@ -1,63 +1,47 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import React from 'react';
+import { Clock } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function TimingsSection() {
-  const sectionRef = useRef(null);
-  const cardsRef = useRef([]);
-
-  useEffect(() => {
-    const el = sectionRef.current;
-    
-    gsap.fromTo(cardsRef.current,
-      { opacity: 0, scale: 0.8, y: 50 },
-      {
-        opacity: 1,
-        scale: 1,
-        y: 0,
-        duration: 0.8,
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: el,
-          start: "top 70%",
-        }
-      }
-    );
-  }, []);
-
-  const addToRefs = el => {
-    if (el && !cardsRef.current.includes(el)) {
-      cardsRef.current.push(el);
-    }
-  };
+  const { t } = useTranslation();
 
   return (
-    <section ref={sectionRef} className="section-padding container" style={{ position: 'relative', zIndex: 1 }}>
-      <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-        <h2 className="text-gradient" style={{ fontSize: '3rem' }}>Darshan Timings</h2>
-        <p style={{ color: 'var(--color-text-muted)', marginTop: '1rem', fontSize: '1.2rem' }}>Plan your visit to seek the divine blessings.</p>
-      </div>
+    <section className="section-padding container">
+      <div className="glass-panel" style={{ maxWidth: '800px', margin: '0 auto', padding: '3rem', textAlign: 'center' }}>
+        <Clock size={48} color="var(--color-gold)" style={{ margin: '0 auto 1.5rem auto' }} />
+        <h2 className="text-gradient" style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{t('timings.title')}</h2>
+        <p style={{ color: 'var(--color-text-muted)', marginBottom: '2.5rem' }}>
+          {t('timings.subtitle')}
+        </p>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-        
-        <div ref={addToRefs} className="glass-panel" style={{ padding: '3rem 2rem', textAlign: 'center' }}>
-          <h3 style={{ color: 'var(--color-gold)', fontSize: '1.5rem', marginBottom: '1rem' }}>Monday - Saturday</h3>
-          <div style={{ fontSize: '1.2rem', margin: '0.5rem 0' }}>Morning</div>
-          <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>7:00 AM - 9:00 AM</div>
-          <div style={{ height: '1px', background: 'rgba(255,255,255,0.1)', margin: '1.5rem 0' }}></div>
-          <div style={{ fontSize: '1.2rem', margin: '0.5rem 0' }}>Evening</div>
-          <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>5:30 PM - 6:30 PM</div>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', textAlign: 'left' }}>
+          <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px' }}>
+            <h3 style={{ color: 'var(--color-saffron)', marginBottom: '1rem' }}>{t('timings.monSat')}</h3>
+            <p style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+              <span>{t('timings.morning')}:</span>
+              <strong>06:00 AM - 12:30 PM</strong>
+            </p>
+            <p style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <span>{t('timings.evening')}:</span>
+              <strong>05:30 PM - 08:30 PM</strong>
+            </p>
+          </div>
+
+          <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', border: '1px solid rgba(255, 215, 0, 0.2)' }}>
+            <h3 style={{ color: 'var(--color-gold)', marginBottom: '1rem' }}>{t('timings.sunday')}</h3>
+            <p style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+              <span>{t('timings.morningAfternoon')}:</span>
+              <strong>06:00 AM - 02:00 PM</strong>
+            </p>
+            <p style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <span>{t('timings.evening')}:</span>
+              <strong>05:00 PM - 09:00 PM</strong>
+            </p>
+            <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: 'var(--color-saffron)' }}>
+              {t('timings.sunNote')}
+            </p>
+          </div>
         </div>
-
-        <div ref={addToRefs} className="glass-panel" style={{ padding: '3rem 2rem', textAlign: 'center', border: '1px solid rgba(255, 153, 51, 0.3)', background: 'rgba(255, 153, 51, 0.05)' }}>
-          <h3 style={{ color: 'var(--color-saffron)', fontSize: '1.5rem', marginBottom: '1rem' }}>Sunday</h3>
-          <div style={{ fontSize: '1.2rem', margin: '0.5rem 0' }}>Morning to Afternoon</div>
-          <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>7:00 AM - 2:30 PM</div>
-          <div style={{ marginTop: '2rem', fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>*Special Poojas are performed on Sundays.</div>
-        </div>
-
       </div>
     </section>
   );

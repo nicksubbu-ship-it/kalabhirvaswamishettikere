@@ -1,12 +1,15 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function OnlinePoojaBooking() {
+  const { t } = useTranslation();
+
   return (
     <div className="section-padding container" style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-        <h1 className="text-gradient" style={{ fontSize: '3rem' }}>Online Pooja Booking</h1>
+        <h1 className="text-gradient" style={{ fontSize: '3rem' }}>{t('booking.title')}</h1>
         <p style={{ color: 'var(--color-text-muted)', marginTop: '1rem', fontSize: '1.2rem' }}>
-          Book your sevas and poojas online. Seek blessings from Sri Kalabhairava Swamy from anywhere in the world.
+          {t('booking.subtitle')}
         </p>
       </div>
 
@@ -14,38 +17,38 @@ export default function OnlinePoojaBooking() {
         <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }} onSubmit={(e) => e.preventDefault()}>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <div style={{ flex: '1 1 250px', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <label style={{ color: 'var(--color-gold)' }}>Full Name</label>
-              <input type="text" placeholder="e.g. Rahul Sharma" style={inputStyle} />
+              <label style={{ color: 'var(--color-gold)' }}>{t('booking.name')}</label>
+              <input type="text" placeholder={t('booking.namePh')} style={inputStyle} />
             </div>
             <div style={{ flex: '1 1 250px', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <label style={{ color: 'var(--color-gold)' }}>Phone Number</label>
-              <input type="tel" placeholder="+91 XXXXX XXXXX" style={inputStyle} />
+              <label style={{ color: 'var(--color-gold)' }}>{t('booking.phone')}</label>
+              <input type="tel" placeholder={t('booking.phonePh')} style={inputStyle} />
             </div>
           </div>
 
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <div style={{ flex: '1 1 250px', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <label style={{ color: 'var(--color-gold)' }}>Gotra (Optional)</label>
-              <input type="text" placeholder="e.g. Kashyapa" style={inputStyle} />
+              <label style={{ color: 'var(--color-gold)' }}>{t('booking.gotra')}</label>
+              <input type="text" placeholder={t('booking.gotraPh')} style={inputStyle} />
             </div>
             <div style={{ flex: '1 1 250px', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <label style={{ color: 'var(--color-gold)' }}>Nakshatra (Optional)</label>
-              <input type="text" placeholder="e.g. Ashwini" style={inputStyle} />
+              <label style={{ color: 'var(--color-gold)' }}>{t('booking.nakshatra')}</label>
+              <input type="text" placeholder={t('booking.nakshatraPh')} style={inputStyle} />
             </div>
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-            <label style={{ color: 'var(--color-gold)' }}>Select Pooja / Seva</label>
+            <label style={{ color: 'var(--color-gold)' }}>{t('booking.pooja')}</label>
             <select style={inputStyle}>
-              <option value="" style={{ color: '#000' }}>-- Choose a Pooja --</option>
-              <option value="archana" style={{ color: '#000' }}>Special Archana (₹101)</option>
-              <option value="rudrabhisheka" style={{ color: '#000' }}>Maha Rudrabhisheka (₹1001)</option>
-              <option value="annadana" style={{ color: '#000' }}>Annadana Seva (₹5001)</option>
+              <option value="" style={{ color: '#000' }}>{t('booking.poojaDefault')}</option>
+              <option value="archana" style={{ color: '#000' }}>{t('booking.pooja1')}</option>
+              <option value="rudrabhisheka" style={{ color: '#000' }}>{t('booking.pooja2')}</option>
+              <option value="annadana" style={{ color: '#000' }}>{t('booking.pooja3')}</option>
             </select>
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-            <label style={{ color: 'var(--color-gold)' }}>Preferred Date</label>
+            <label style={{ color: 'var(--color-gold)' }}>{t('booking.date')}</label>
             <input type="date" style={inputStyle} />
           </div>
 
@@ -65,7 +68,7 @@ export default function OnlinePoojaBooking() {
           onMouseDown={e => e.currentTarget.style.transform = 'scale(0.98)'}
           onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
           >
-            Proceed to Payment
+            {t('booking.btn')}
           </button>
         </form>
       </div>

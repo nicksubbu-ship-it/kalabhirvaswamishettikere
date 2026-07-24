@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "title": "Sri Kalabhairava Swamy",
+    "home": "Home",
+    "about": "About",
+    "onlinePooja": "Online Pooja",
+    "liveDarshan": "Live Darshan",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Sri Kalabhairava Swamy Temple",
+    "subtitle": "Discover the divine energy and historical significance in Settikere, Tumkur.",
+    "scroll": "SCROLL"
+  },
+  "about": {
+    "title": "Divine Heritage",
+    "p1": "The Sri Kalabhairava Swamy Temple in Settikere is a beacon of spiritual significance in the Tumkur district. Dedicated to Lord Kalabhairava, a fierce manifestation of Lord Shiva, the temple attracts devotees from all over Karnataka.",
+    "p2": "Experience peace, devotion, and architectural beauty as you step into the sacred premises. The temple is especially vibrant during Kalashtami and special Saturday poojas."
+  },
+  "events": {
+    "title": "Upcoming Events",
+    "subtitle": "Join us for special poojas and divine celebrations.",
+    "e1_date": "August 15, 2026",
+    "e1_title": "Kalashtami Special Pooja",
+    "e1_desc": "A grand celebration and special alankara for Lord Kalabhairava.",
+    "e2_date": "September 12, 2026",
+    "e2_title": "Maha Rudrabhisheka",
+    "e2_desc": "Sacred chanting and abhisheka rituals from early morning.",
+    "e3_date": "October 24, 2026",
+    "e3_title": "Deepavali Deepotsava",
+    "e3_desc": "The temple will be lit with thousands of diyas. Special darshan available.",
+    "e4_date": "December 5, 2026",
+    "e4_title": "Karthika Somavara Pooja",
+    "e4_desc": "Auspicious Monday prayers dedicated to Lord Shiva."
+  },
+  "gallery": {
+    "title": "Divine Gallery",
+    "subtitle": "Glimpses of the majestic architecture and spirituality.",
+    "alt1": "Sri Kalabhairava Swamy Idol",
+    "alt2": "Temple Vimana",
+    "alt3": "Sri Kalabhairava Swamy",
+    "alt4": "Sri Kalabhairava Swamy"
+  },
+  "upload": {
+    "title": "Share Your Experience",
+    "subtitle": "Upload your latest photos and videos from the temple.",
+    "dragDrop": "Drag & Drop Media Here",
+    "browse": "or click to browse your files (JPG, PNG, MP4)",
+    "btn": "Select Files"
+  },
+  "timings": {
+    "title": "Darshan Timings",
+    "subtitle": "Plan your visit to seek the divine blessings.",
+    "monSat": "Monday - Saturday",
+    "morning": "Morning",
+    "evening": "Evening",
+    "sunday": "Sunday",
+    "morningAfternoon": "Morning to Afternoon",
+    "sunNote": "*Special Poojas are performed on Sundays."
+  },
+  "footer": {
+    "title": "Sri Kalabhairava Swamy Temple",
+    "desc": "A divine abode situated in the heart of Settikere, offering peace, spirituality, and rich heritage to all devotees.",
+    "contactTitle": "Contact & Location",
+    "address": "Settikere, Chikkanayakanahalli Taluk, Tumkur District - 572226, Karnataka, India",
+    "quickLinks": "Quick Links",
+    "aboutLink": "About Temple",
+    "timingsLink": "Darshan Timings",
+    "donationsLink": "Donations",
+    "copyright": "© {{year}} Sri Kalabhairava Swamy Temple, Settikere. All rights reserved."
+  },
+  "booking": {
+    "title": "Online Pooja Booking",
+    "subtitle": "Book your sevas and poojas online. Seek blessings from Sri Kalabhairava Swamy from anywhere in the world.",
+    "name": "Full Name",
+    "namePh": "e.g. Rahul Sharma",
+    "phone": "Phone Number",
+    "phonePh": "+91 XXXXX XXXXX",
+    "gotra": "Gotra (Optional)",
+    "gotraPh": "e.g. Kashyapa",
+    "nakshatra": "Nakshatra (Optional)",
+    "nakshatraPh": "e.g. Ashwini",
+    "pooja": "Select Pooja / Seva",
+    "poojaDefault": "-- Choose a Pooja --",
+    "pooja1": "Special Archana (₹101)",
+    "pooja2": "Maha Rudrabhisheka (₹1001)",
+    "pooja3": "Annadana Seva (₹5001)",
+    "date": "Preferred Date",
+    "btn": "Proceed to Payment"
+  },
+  "darshan": {
+    "title": "Live Darshan",
+    "subtitle": "Experience the divine presence of Sri Kalabhairava Swamy from your home.",
+    "live": "LIVE",
+    "watching": "watching",
+    "play": "CLICK TO PLAY",
+    "schedule": "Today's Live Schedule",
+    "s1_name": "Suprabhata Seva",
+    "s1_time": "06:00 AM IST",
+    "s2_name": "Maha Mangalarathi",
+    "s2_time": "12:30 PM IST",
+    "s3_name": "Evening Sandhya Aarti",
+    "s3_time": "06:30 PM IST"
+  }
+}
