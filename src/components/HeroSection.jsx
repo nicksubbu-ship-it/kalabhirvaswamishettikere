@@ -11,11 +11,6 @@ export default function HeroSection() {
         <h1 className="hero-title text-gradient">{t('hero.title')}</h1>
         <p className="hero-subtitle">{t('hero.subtitle')}</p>
       </div>
-      
-      <div className="scroll-indicator">
-        <p>{t('hero.scroll')}</p>
-        <ChevronDown className="bounce" />
-      </div>
     </section>
   );
 }

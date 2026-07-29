@@ -1,14 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import Footer from './Footer';
-import { Canvas } from '@react-three/fiber';
-import Canvas3D from './Canvas3D';
-import FallingFlowers from './FallingFlowers';
 import { useTranslation } from 'react-i18next';
-import { Globe } from 'lucide-react';
+import { Globe, Menu, X } from 'lucide-react';
 
 export default function Layout() {
   const { t, i18n } = useTranslation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const changeLanguage = (e) => {
     i18n.changeLanguage(e.target.value);
@@ -16,13 +14,6 @@ export default function Layout() {
 
   return (
     <div style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <FallingFlowers />
-      <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100vh', zIndex: -1 }}>
-        <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
-          <Canvas3D />
-        </Canvas>
-      </div>
-
       <header className="glass-panel" style={{
         position: 'sticky',
         top: 0,
@@ -33,19 +24,27 @@ export default function Layout() {
         borderRight: 'none',
         borderRadius: '0 0 16px 16px'
       }}>
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Link to="/" style={{ fontSize: '1.5rem', fontWeight: 'bold' }} className="text-gradient">
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
+          <Link to="/" style={{ fontSize: '1.2rem', fontWeight: 'bold' }} className="text-gradient">
             {t('nav.title')}
           </Link>
           
-          <nav style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-            <Link to="/" style={{ color: 'var(--color-text)', transition: 'color 0.3s' }}>{t('nav.home')}</Link>
-            <Link to="/about" style={{ color: 'var(--color-text)', transition: 'color 0.3s' }}>{t('nav.about')}</Link>
-            <Link to="/pooja-booking" style={{ color: 'var(--color-text)', transition: 'color 0.3s' }}>{t('nav.onlinePooja')}</Link>
-            <Link to="/live-darshan" style={{ color: 'var(--color-text)', transition: 'color 0.3s' }}>{t('nav.liveDarshan')}</Link>
-            <Link to="/contact" style={{ color: 'var(--color-text)', transition: 'color 0.3s' }}>{t('nav.contact')}</Link>
+          <button 
+            className="mobile-menu-btn" 
+            onClick={() => setIsMenuOpen(!isMenuOpen)} 
+            style={{ display: 'none', background: 'transparent', border: 'none', color: 'var(--color-gold)' }}
+          >
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+          
+          <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+            <Link to="/" onClick={() => setIsMenuOpen(false)} style={{ color: 'var(--color-text)', transition: 'color 0.3s' }}>{t('nav.home')}</Link>
+            <Link to="/about" onClick={() => setIsMenuOpen(false)} style={{ color: 'var(--color-text)', transition: 'color 0.3s' }}>{t('nav.about')}</Link>
+            <Link to="/pooja-booking" onClick={() => setIsMenuOpen(false)} style={{ color: 'var(--color-text)', transition: 'color 0.3s' }}>{t('nav.onlinePooja')}</Link>
+            <Link to="/live-darshan" onClick={() => setIsMenuOpen(false)} style={{ color: 'var(--color-text)', transition: 'color 0.3s' }}>{t('nav.liveDarshan')}</Link>
+            <Link to="/contact" onClick={() => setIsMenuOpen(false)} style={{ color: 'var(--color-text)', transition: 'color 0.3s' }}>{t('nav.contact')}</Link>
             
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginLeft: '1rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginLeft: 'auto' }}>
               <Globe size={18} color="var(--color-gold)" />
               <select 
                 value={i18n.language.startsWith('kn') ? 'kn' : 'en'} 

@@ -11,8 +11,11 @@ export default function AboutSection() {
         <p style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'var(--color-text-muted)', marginBottom: '1.5rem' }}>
           {t('about.p1')}
         </p>
-        <p style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'var(--color-text-muted)' }}>
+        <p style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'var(--color-text-muted)', marginBottom: '1.5rem' }}>
           {t('about.p2')}
+        </p>
+        <p style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'var(--color-text-muted)' }}>
+          {t('about.p3')}
         </p>
       </div>
     </section>
