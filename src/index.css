@@ -6,10 +6,10 @@
   --color-gold-light: #ffea70;
   --color-maroon: #800000;
   --color-maroon-dark: #4d0000;
-  --color-dark: #0a0a0a;
-  --color-dark-alt: #141414;
-  --color-text: #f0f0f0;
-  --color-text-muted: #a0a0a0;
+  --color-dark: #ffffff;
+  --color-dark-alt: #f5f5f5;
+  --color-text: #1a1a1a;
+  --color-text-muted: #555555;
   
   /* Fonts */
   --font-heading: 'Cinzel', serif;
@@ -62,13 +62,13 @@ a {
   text-decoration: none;
 }
 
-/* Utilities */
 .glass-panel {
-  background: rgba(20, 20, 20, 0.4);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
 }
 
 .text-gradient {
