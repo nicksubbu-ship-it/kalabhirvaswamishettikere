@@ -32,7 +32,7 @@ export default function Layout() {
           <button 
             className="mobile-menu-btn" 
             onClick={() => setIsMenuOpen(!isMenuOpen)} 
-            style={{ display: 'none', background: 'transparent', border: 'none', color: 'var(--color-gold)' }}
+            style={{ display: 'none', background: 'transparent', border: 'none', color: 'var(--color-maroon)' }}
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -50,9 +50,9 @@ export default function Layout() {
                 value={i18n.language.startsWith('kn') ? 'kn' : 'en'} 
                 onChange={changeLanguage}
                 style={{
-                  background: 'rgba(0,0,0,0.5)',
-                  color: 'white',
-                  border: '1px solid var(--color-gold)',
+                  background: 'var(--color-dark-alt)',
+                  color: 'var(--color-text)',
+                  border: '1px solid var(--color-text-muted)',
                   borderRadius: '4px',
                   padding: '0.2rem 0.5rem',
                   outline: 'none',

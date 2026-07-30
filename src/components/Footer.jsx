@@ -6,7 +6,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer style={{ background: 'var(--color-dark-alt)', borderTop: '1px solid rgba(255,255,255,0.1)', padding: '4rem 0 2rem 0', marginTop: '4rem' }}>
+    <footer style={{ background: 'var(--color-dark-alt)', borderTop: '1px solid rgba(0,0,0,0.1)', padding: '4rem 0 2rem 0', marginTop: '4rem' }}>
       <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem', marginBottom: '3rem' }}>
         
         <div>
@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div style={{ textAlign: 'center', paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.1)', color: 'var(--color-text-muted)', fontSize: '0.9rem' }}>
+      <div style={{ textAlign: 'center', paddingTop: '2rem', borderTop: '1px solid rgba(0,0,0,0.1)', color: 'var(--color-text-muted)', fontSize: '0.9rem' }}>
         {t('footer.copyright', { year: currentYear })}
       </div>
     </footer>

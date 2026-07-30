@@ -37,11 +37,11 @@ export default function LiveDarshan() {
         <div className="glass-panel" style={{ padding: '2rem' }}>
           <h3 style={{ color: 'var(--color-gold)', marginBottom: '1rem' }}>{t('darshan.schedule')}</h3>
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <li style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem' }}>
+            <li style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(0,0,0,0.1)', paddingBottom: '0.5rem' }}>
               <span>{t('darshan.s1_name')}</span>
               <span style={{ color: 'var(--color-text-muted)' }}>{t('darshan.s1_time')}</span>
             </li>
-            <li style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem' }}>
+            <li style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(0,0,0,0.1)', paddingBottom: '0.5rem' }}>
               <span>{t('darshan.s2_name')}</span>
               <span style={{ color: 'var(--color-text-muted)' }}>{t('darshan.s2_time')}</span>
             </li>

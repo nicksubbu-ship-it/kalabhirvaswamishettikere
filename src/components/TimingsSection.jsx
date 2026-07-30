@@ -14,8 +14,8 @@ export default function TimingsSection() {
           {t('timings.subtitle')}
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', textAlign: 'left' }}>
-          <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', textAlign: 'left' }}>
+          <div style={{ padding: '1.5rem', background: 'rgba(0,0,0,0.03)', borderRadius: '12px' }}>
             <h3 style={{ color: 'var(--color-saffron)', marginBottom: '1rem' }}>{t('timings.monSat')}</h3>
             <p style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
               <span>{t('timings.morning')}:</span>
@@ -27,7 +27,7 @@ export default function TimingsSection() {
             </p>
           </div>
 
-          <div style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', border: '1px solid rgba(255, 215, 0, 0.2)' }}>
+          <div style={{ padding: '1.5rem', background: 'rgba(0,0,0,0.03)', borderRadius: '12px', border: '1px solid rgba(0, 0, 0, 0.1)' }}>
             <h3 style={{ color: 'var(--color-gold)', marginBottom: '1rem' }}>{t('timings.sunday')}</h3>
             <p style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
               <span>{t('timings.morningAfternoon')}:</span>
