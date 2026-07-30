@@ -10,7 +10,7 @@ export default function Contact() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', fontSize: '1.2rem', color: 'var(--color-text)' }}>
           <p><strong>{t('footer.contactTitle')}:</strong><br/><span style={{ color: 'var(--color-text-muted)' }}>{t('footer.address')}</span></p>
           <p><strong>Email:</strong><br/><span style={{ color: 'var(--color-text-muted)' }}>info@srikalabhairavaswamytemple.org</span></p>
-          <p><strong>Phone:</strong><br/><span style={{ color: 'var(--color-text-muted)' }}>+91 98765 43210</span></p>
+          <p><strong>Phone:</strong><br/><span style={{ color: 'var(--color-text-muted)' }}>+91 9916762277</span></p>
         </div>
       </div>
     </div>
