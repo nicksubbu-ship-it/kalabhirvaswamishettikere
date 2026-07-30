@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -7,7 +8,7 @@ export default function Footer() {
 
   return (
     <footer style={{ background: 'var(--color-dark-alt)', borderTop: '1px solid rgba(0,0,0,0.1)', padding: '4rem 0 2rem 0', marginTop: '4rem' }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem', marginBottom: '3rem' }}>
+      <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', marginBottom: '3rem', wordBreak: 'break-word' }}>
         
         <div>
           <h3 className="text-gradient" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{t('footer.title')}</h3>
@@ -26,9 +27,10 @@ export default function Footer() {
         <div>
           <h4 style={{ color: 'var(--color-gold)', marginBottom: '1.5rem' }}>{t('footer.quickLinks')}</h4>
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-            <li><a href="#about" style={{ color: 'var(--color-text-muted)', textDecoration: 'none' }}>{t('footer.aboutLink')}</a></li>
-            <li><a href="#timings" style={{ color: 'var(--color-text-muted)', textDecoration: 'none' }}>{t('footer.timingsLink')}</a></li>
-            <li><a href="#donations" style={{ color: 'var(--color-text-muted)', textDecoration: 'none' }}>{t('footer.donationsLink')}</a></li>
+            <li><Link to="/about" style={{ color: 'var(--color-text-muted)', textDecoration: 'none' }}>{t('nav.about')}</Link></li>
+            <li><Link to="/pooja-booking" style={{ color: 'var(--color-text-muted)', textDecoration: 'none' }}>{t('nav.onlinePooja')}</Link></li>
+            <li><Link to="/live-darshan" style={{ color: 'var(--color-text-muted)', textDecoration: 'none' }}>{t('nav.liveDarshan')}</Link></li>
+            <li><Link to="/contact" style={{ color: 'var(--color-text-muted)', textDecoration: 'none' }}>{t('nav.contact')}</Link></li>
           </ul>
         </div>
       </div>
